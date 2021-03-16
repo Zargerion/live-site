@@ -54,7 +54,7 @@ ROOT_URLCONF = 'SubterSite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': os.path.join(BASE_DIR, 'Main/Templates/Main'),
+        'DIRS': os.path.join(BASE_DIR, 'Templates'),
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -68,7 +68,7 @@ TEMPLATES = [
 ]
 
 TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR,  'Main/Templates/Main'),
+    os.path.join(BASE_DIR,  'Templates'),
 )
 
 WSGI_APPLICATION = 'SubterSite.wsgi.application'
