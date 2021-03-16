@@ -24,7 +24,7 @@ SECRET_KEY = '04+fren@e11csoh**1)!ffovbo3d88#uml_)+7zh3@flcwh6m4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['subter.herokuapp.com', '127.0.0.1'] # *
+ALLOWED_HOSTS = ['subter.herokuapp.com', '*'] # *
 
 # Application definition
 

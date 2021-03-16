@@ -1,6 +1,6 @@
 html, body {
 	/* background: url("images/bg.jpg") center no-repeat; */
-	background: url("subter.herokuapp.com/static/bg3.jpg") no-repeat center;
+	background: url("http://127.0.0.1:8000/static/bg3.jpg") no-repeat center;
 	background-size: cover;
 	background-color: black;
 	width: 100%;
@@ -74,7 +74,7 @@ h6 {
 	display: block;
 	position: relative;
 	bottom: -30%; /*sdvig po relativu*/
-	background: url(subter.herokuapp.com/static/MainLogoSubter1.png) no-repeat center;
+	background: url(http://127.0.0.1:8000/static/MainLogoSubter1.png) no-repeat center;
 	background-size: contain;
 	width: 15%;
 	height: 100%;
