@@ -1,10 +1,32 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Enter to Subter's World</title>
-    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/static/mainStyle.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'mainStyle.css' %}">
     <!--<link rel="stylesheet" type="text/css" href="../../static/Main/mainStyle.css">-->
+    <style>
+        html, body{
+            background: url("{% static 'bg3.jpg' %}") no-repeat center;
+            background-size: cover;
+            background-color: black;
+            width: 100%;
+            height: 100%;
+            padding: 0%;
+            margin: 0%;
+        }
+        .logo_holder {
+            display: block;
+            position: relative;
+            bottom: -30%; /*sdvig po relativu*/
+            background: url({% static 'MainLogoSubter1.png' %}) no-repeat center;
+            background-size: contain;
+            width: 15%;
+            height: 100%;
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="guard">
@@ -13,16 +35,16 @@
         </div>
         <div class="second">
             <div class="start_key">
-                <a href="http://127.0.0.1:8000/renata" class="start_key_text">Start</a>
+                <a href="{% url 'rina' %}" class="start_key_text">Start</a>
             </div>
         </div>
         <div class="third">
             <div class="links_holder">
-                <img src="http://127.0.0.1:8000/static/youtube.png" alt="youtube" class="image_link" onclick="location.href='https://www.youtube.com/channel/UCdFQVw5y8yJmw2aTi0qjxxA'">
-                <img src="http://127.0.0.1:8000/static/vk.png" alt="vk" class="image_link" onclick="location.href='https://vk.com/oleg_sabter'">
-                <img src="http://127.0.0.1:8000/static/telegram.png" alt="telegram" class="image_link" onclick="location.href='https://t.me/oleg_zarg'">
-                <img src="http://127.0.0.1:8000/static/discord.png" alt="discord" class="image_link" onclick="location.href='https://discord.gg/GEHdCpjYVY'">
-                <img src="http://127.0.0.1:8000/static/e-mail.png" alt="e-mail" class="image_link" onclick="location.href='mailto:iolegx7@gmail.com'">
+                <img src="{% static 'youtube.png' %}" alt="youtube" class="image_link" onclick="location.href='https://www.youtube.com/channel/UCdFQVw5y8yJmw2aTi0qjxxA'">
+                <img src="{% static 'vk.png' %}" alt="vk" class="image_link" onclick="location.href='https://vk.com/oleg_sabter'">
+                <img src="{% static 'telegram.png' %}" alt="telegram" class="image_link" onclick="location.href='https://t.me/oleg_zarg'">
+                <img src="{% static 'discord.png' %}" alt="discord" class="image_link" onclick="location.href='https://discord.gg/GEHdCpjYVY'">
+                <img src="{% static 'e-mail.png' %}" alt="e-mail" class="image_link" onclick="location.href='mailto:iolegx7@gmail.com'">
             </div>
         </div>
     </div>
