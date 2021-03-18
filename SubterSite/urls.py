@@ -15,7 +15,7 @@ favicon_view = RedirectView.as_view(url='/static/favicon.ico', permanent=True)
 urlpatterns = [
     path('admin', admin.site.urls),
     path('', mainview, name='main'),
-    path('renata', RinaView.as_view(), name='rina'),
+    path('SkriFo', RinaView.as_view(), name='rina'),
     re_path(r'^favicon\.ico$', favicon_view),
 ]
 
