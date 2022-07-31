@@ -25,7 +25,7 @@ SECRET_KEY = '04+fren@e11csoh**1)!ffovbo3d88#uml_)+7zh3@flcwh6m4'
 DEBUG = False
 
 #ALLOWED_HOSTS = ['subter.herokuapp.com', '*'] # *
-ALLOWED_HOSTS = ['http://127.0.0.1:8000/'] # *
+ALLOWED_HOSTS = ['*,'] # *
 # Application definition
 
 INSTALLED_APPS = [
@@ -68,7 +68,7 @@ TEMPLATES = [
 ]
 
 
-#WSGI_APPLICATION = 'SubterSite.wsgi.application'
+WSGI_APPLICATION = 'SubterSite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
