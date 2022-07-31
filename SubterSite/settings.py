@@ -67,11 +67,8 @@ TEMPLATES = [
     },
 ]
 
-#TEMPLATE_DIRS = (
-#    os.path.join(BASE_DIR,  'Templates'),
-#   )
 
-WSGI_APPLICATION = 'SubterSite.wsgi.application'
+#WSGI_APPLICATION = 'SubterSite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
