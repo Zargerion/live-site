@@ -3,12 +3,7 @@ from django.urls import path
 from django.urls.conf import re_path
 
 
-from Main.views import mainview
-from Main.views import custom_handler404
-from Main.views import custom_handler403
-from Main.views import custom_handler500
-from Main.views import RinaView
-from Main.views import favicon_view
+from Main.views import *
 
 
 urlpatterns = [
