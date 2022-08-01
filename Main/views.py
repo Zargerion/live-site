@@ -1,5 +1,9 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.views.generic.base import RedirectView
+
+
+favicon_view = RedirectView.as_view(url='/static/favicon.ico', permanent=True)
 
 
 def mainview(request):

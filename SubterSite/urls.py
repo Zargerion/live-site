@@ -1,7 +1,6 @@
 from django.contrib import admin
 from django.urls import path
 from django.urls.conf import re_path
-from django.views.generic.base import RedirectView
 
 
 from Main.views import mainview
@@ -9,8 +8,8 @@ from Main.views import custom_handler404
 from Main.views import custom_handler403
 from Main.views import custom_handler500
 from Main.views import RinaView
+from Main.views import favicon_view
 
-favicon_view = RedirectView.as_view(url='/static/favicon.ico', permanent=True)
 
 urlpatterns = [
     path('admin', admin.site.urls),
