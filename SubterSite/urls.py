@@ -1,10 +1,10 @@
 from django.contrib import admin
 from django.urls import path
 from django.urls.conf import re_path
-from Main import tries
 
 
 from Main.views import *
+from Main.tries import *
 
 
 urlpatterns = [
@@ -15,7 +15,7 @@ urlpatterns = [
     path('123', TemplateView.as_view(template_name='try.html', extra_context={
         'TitleOfTryPage': 'Try Mode Page',
         'Welcoming': 'Welcome to Try Mode Page',
-        'Outputs': str(outputs())
+        'Outputs': outputs()
     }))
 ]
 
