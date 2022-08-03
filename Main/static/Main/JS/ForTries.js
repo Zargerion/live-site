@@ -2,9 +2,9 @@
 function opacityToZeroTimer() {
 
 }*/
-function firstF() {
-    o = 1
-    return o
+function jsFunk() {
+    let a = "String For Java Script Outs"
+    return a
 }
 
-let JS_Try_Mode_Output = toString(firstF())
+let JS_Try_Mode_Output = jsFunk()

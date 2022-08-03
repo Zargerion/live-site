@@ -1,3 +1,4 @@
+from django.core.handlers import exception
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.views.generic.base import RedirectView
@@ -27,8 +28,7 @@ def custom_handler403(request, exception):
 def custom_handler500(request):
     return render(request, '500.html')
 
-#train_view
-#class TryCodeView(TemplateView):
-    #template_name = 'try.html'
-    #extra_context = {"TitleOfTryPage": "123"}
-
+# train_view
+# class TryCodeView(TemplateView):
+    # template_name = 'try.html'
+    # extra_context = {"TitleOfTryPage": "123"}

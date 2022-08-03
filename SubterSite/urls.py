@@ -15,7 +15,7 @@ urlpatterns = [
     path('123', TemplateView.as_view(template_name='try.html', extra_context={
         'TitleOfTryPage': 'Try Mode Page',
         'Welcoming': 'Welcome to Try Mode Page',
-        'Outputs': outputs()
+        'Outputs': outputs
     }))
 ]
 

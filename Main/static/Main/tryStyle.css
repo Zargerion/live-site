@@ -12,19 +12,32 @@ html, body {
     flex-direction: column;
     width: 100%;
     height: 100%;
+    color: #6495ED;
 }
 
-.a {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.3s, visibility 0s linear 0.3s;
-}
-/*.textHolderWelcome:hover .a {
-  opacity: 1;
-  visibility: visible;
-  transition-delay: 0s;
-}*/
 
 .b{
     display: block
 }
+.JSOutput {
+    color: #FA8072;
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+}
+
+.textS {
+    font-size: 4em;
+    color: #FFD700;
+    font-family: 'Algerian', sans-serif;
+}
+
+.back {
+    font-size: 2em;
+    color: #F8F8FF;
+    font-family: 'Algerian', sans-serif;
+    z-index: -100;
+
+}
+
