@@ -28,8 +28,7 @@ def custom_handler500(request):
     return render(request, '500.html')
 
 #train_view
-
-class TryCodeView(TemplateView):
-    template_name = 'try.html'
-    extra_content = {"TitleOfTryPage": "123"}
+#class TryCodeView(TemplateView):
+    #template_name = 'try.html'
+    #extra_context = {"TitleOfTryPage": "123"}
 

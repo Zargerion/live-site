@@ -7,8 +7,17 @@
     <link rel="stylesheet" type="text/css" href="{% static 'tryStyle.css' %}">
 </head>
 <body>
+    <script>
+    setTimeout(function(){
+	    document.getElementById('NeedToHideByJS').style.display = 'none';
+    }, 1000);
+    </script>
     <div class="guard">
-        <div class="textHolder"><h1 class="text">{{ TitleOfTryPage }}</h1></div>
+        <div id="NeedToHideByJS" class="textHolderWelcome"><h1 class="text">{{ Welcoming }}</h1></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
     </div>
 </body>
 </html>
