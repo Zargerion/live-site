@@ -11,6 +11,7 @@ urlpatterns = [
     path('', mainview, name='main'),
     path('hello', RinaView.as_view(), name='rina'),
     re_path(r'^favicon\.ico$', favicon_view),
+    path('123', TryCodeView.as_view(), name='Training code page')
 ]
 
 handler404 = custom_handler404

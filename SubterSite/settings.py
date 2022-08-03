@@ -52,10 +52,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'SubterSite.urls'
 
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'Main/Templates')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': (os.path.join(os.path.dirname(__file__), '..', 'Main/Templates').replace('\\','/'),),
+        'DIRS': [TEMPLATE_DIR, ], #(os.path.join(os.path.dirname(__file__), '..', 'Main/Templates').replace('\\','/'),),
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
