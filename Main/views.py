@@ -31,5 +31,5 @@ def custom_handler500(request):
 
 class TryCodeView(TemplateView):
     template_name = 'try.html'
-    TitleOfTryPage = 'Welcome to Try Mode Page!'
+    extra_content = {"TitleOfTryPage": "123"}
 
