@@ -3,6 +3,7 @@ html, body {
     margin: 0;
     width: 100vw;
     height: 100vh;
+    font-family: 'Algerian', sans-serif;
 }
 
 .guard {
@@ -33,11 +34,38 @@ html, body {
     font-family: 'Algerian', sans-serif;
 }
 
+.PyOuts {
+    font-weight: normal;
+}
+
 .back {
+    display: table;
     font-size: 2em;
-    color: #F8F8FF;
-    font-family: 'Algerian', sans-serif;
-    z-index: -100;
+    color: #696969;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 59, 62, .9);
+    text-align: center;
+}
+
+/*#F8F8FF*/
+
+.textBack {
+    vertical-align: middle;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+    opacity: 0.20;
+    display: none;
 
 }
+.guard_2 {
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -100;
+}
+
 

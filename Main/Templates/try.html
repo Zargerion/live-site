@@ -8,17 +8,33 @@
     <script src="{% static 'JS/ForTries.js' %}"></script>
 </head>
 <body>
-    <div class="back"><h1 class="text">Welcome to Try Mode Page</h1></div>
     <script>
+    "setTimeout(() => { document.getElementById('NeedToHideByJS').style.opacity = 0.95 }, 175);"
+    "setTimeout(() => { document.getElementById('NeedToHideByJS').style.opacity = 0.8 }, 700);"
+    "setTimeout(() => { document.getElementById('NeedToHideByJS').style.opacity = 0.7 }, 1050);"
+    "setTimeout(() => { document.getElementById('NeedToHideByJS').style.opacity = 0.6 }, 1400);"
+    "setTimeout(() => { document.getElementById('NeedToHideByJS').style.opacity = 0.5 }, 1750);"
+    "setTimeout(() => { document.getElementById('NeedToHideByJS').style.opacity = 0.4 }, 2100);"
+    "setTimeout(() => { document.getElementById('NeedToHideByJS').style.opacity = 0.3 }, 2450);"
+    "setTimeout(() => { document.getElementById('NeedToHideByJS').style.opacity = 0.2 }, 2800);"
+    "setTimeout(() => { document.getElementById('NeedToHideByJS').style.opacity = 0.1 }, 3325);"
+    "setTimeout(() => { document.getElementById('NeedToHideByJS').style.opacity = 0 }, 3500);"
+
     setTimeout(function(){
 	    document.getElementById('NeedToHideByJS').style.display = 'none';
     }, 3555);
+    setTimeout(function(){
+	    document.getElementById('NeedToShowJS').style.display = 'table-cell';
+    }, 3555);
     </script>
+    <div class="guard_2">
+        <div class="back"><h1 id="NeedToShowJS" class="textBack">Welcome to Try Mode Page</h1></div>
+    </div>
     <div class="guard">
         <div id="NeedToHideByJS" class="textHolderWelcome"><h1 class="textS">{{ Welcoming }}</h1></div>
         <div class="b"><h1 class="text"></h1></div>
-        <div class="b"><h1 class="text">{{ Outputs }}</h1></div>
-        <div class="JSOutput"> <script>document.write(JS_Try_Mode_Output)</script> </div>
+        <div class="b"><h1 class="PyOuts">{{ Outputs }}</h1></div>
+        <div id="NeedToDoOutsOfJsHere" class="JSOutput"><script>document.write(JS_Try_Mode_Output)</script></div>
         <div class="b"><h1 class="text"></h1></div>
     </div>
 </body>
