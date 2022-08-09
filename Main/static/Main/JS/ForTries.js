@@ -1,62 +1,81 @@
-/*setTimeout(() => { document.getElementById('NeedToHideByJS').style.opacity = 0.75 }, 1000)
-out = setTimeout(() => {document.getElementById('NeedToHideByJS').style.opacity = "0," + String(all_values_of_opacity)}, all_values_of_timers)
-"<br \/>"
-document.getElementById("NeedToDoOutsOfJsHere").innerHTML
+"use strict"
 
-}*/
 function jsFunk() {
-    let a = "String For Java Script Outs"
-    return a
-}
-
-function minusOpacity() {
-
-    let all_values_of_timers = 0
-    let all_values_of_opacity = 1.00
-    let command_to_decrease_opacity_by_time
-    let d_str = ""
-    let string_of_command
-    let times = 1
-    let govno
-
-    for (let i = 0; i < 20; i++) {
-        /*all_values_of_timers += 175
-        all_values_of_opacity -= 0.05
-        parseFloat( "0." + String(all_values_of_opacity))
-        command_to_decrease_opacity_by_time = setTimeout(() => {document.getElementById('NeedToHideByJS').style.opacity = 1 }, all_values_of_timers)
-        d_str += String(all_values_of_opacity) + " "
-        string_of_command = 'setTimeout(() => {document.getElementById(NeedToHideByJS).style.opacity = ' + String(parseFloat("0." + String(all_values_of_opacity))) + "}, " + String(all_values_of_timers)
-        d_str += string_of_command + "**************" + String(times++) + "**************" */
-    }
-return 1
+    return "String For Java Script Outs";
 }
 
 function stringFromElements() {
-    let str = ''
+    let str = '';
     for (let i = 0; i < 20; i++) {
-        str += ' *'
+        str += ' *';
     }
-return str
+return alert(str);
 }
 
-    let command_to_decrease_opacity_by_time
-    let all_values_of_timers = 0
-    let all_values_of_opacity = 1.00
-
-    for (let i = 0; i < 20; i++) {
-        command_to_decrease_opacity_by_time = setTimeout(() => {document.getElementById('NeedToHideByJS').style.opacity = console.log(all_values_of_opacity)}, console.log(all_values_of_timers))
 
 
+class FramePerSomething {
+    constructor(fps) {
+        this.fps = fps;
+        this.max_timer = 3500;
+        this.max_opacity = 100;
+    }
 
-        all_values_of_opacity -= 0.05
-        all_values_of_timers += 175
+    makeOpacityStep() {
+        return Math.floor(this.max_opacity / this.fps);
+    }
+
+    makeTimersStep() {
+        return Math.floor(this.max_timer / this.fps);
     }
 
 
-let js_funk = jsFunk()
-let h = stringFromElements()
+}
 
+let enter_of_fps = 100; /* Good value is 50 or can be 20,25,100 */
 
-let JS_Try_Mode_Output = fuck()
-console.log(String(666))
-console.log(fuck())
+let fps = new FramePerSomething(enter_of_fps);
+
+function minusOpacityByTime (frame_rate=enter_of_fps) {
+    let all_values_of_opacity = 100
+    let all_values_of_timers = 0
+
+    for (let i = 0; i < frame_rate; i++) {
+        all_values_of_opacity -= fps.makeOpacityStep();
+        all_values_of_timers += fps.makeTimersStep();
+        (function () {
+            let all_values_of_opacity_2 = all_values_of_opacity;
+            let all_values_of_timers_2 = all_values_of_timers;
+            let error1 = "Your nums is string or negative. Maybe float mums have more, then 2 symbols after (. or ,). "+
+                "Or nums can have 0 ahead integer value. ("
+            if ((parseFloat(moveComma(all_values_of_opacity_2, -2)) ===
+                (moveComma(all_values_of_opacity_2, -2))) &&
+                (Number.isInteger(all_values_of_timers_2))) {
+
+                return setTimeout(() => {
+                    document.getElementById('NeedToHideByJS').style.opacity =
+                    moveComma(all_values_of_opacity_2, -2)}, all_values_of_timers_2);
+
+            } else {
+                return console.log(error1 += String(i));
+            }
+        })()
+    }
+}
+
+function moveComma(val, moveCommaByInput) {
+    if (val || typeof val === 'number') {
+        const valueNumber = Number(val);
+        const moveCommaBy = moveCommaByInput || 0;
+
+            if (isNaN(valueNumber)) {
+                return null;
+            } else {
+                return Number(`${valueNumber}e${moveCommaBy}`);
+            }
+    }
+
+    return null;
+}
+
+let JS_Try_Mode_Output = jsFunk();
