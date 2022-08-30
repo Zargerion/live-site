@@ -57,7 +57,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'Main/Templates')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR, ], #(os.path.join(os.path.dirname(__file__), '..', 'Main/Templates').replace('\\','/'),),
+        'DIRS': [TEMPLATE_DIR], #(os.path.join(os.path.dirname(__file__), '..', 'Main/Templates').replace('\\','/'),),
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -83,6 +83,11 @@ DATABASES = {
     }
 }
 
+SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies' # means contain sessions info only in cookie
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False # doesn't delete session info after browser closing
+SESSION_COOKIE_AGE = 756864000 # 24 years in seconds
+SESSION_COOKIE_SECURE = True # means only https sent to your browser
+
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -100,6 +105,9 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+LOGIN_REDIRECT_URL = '/'
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/

@@ -4,12 +4,12 @@ function jsFunk() {
     return "String For Java Script Outs";
 }
 
-function stringFromElements() {
+function stringsWithTheFor() {
     let str = '';
-    for (let i = 0; i < 20; i++) {
-        str += ' *';
+    for (let i = 0; i < 5; i++) {
+        str += 'str №' + String(i + 1) + '<br \/>';
     }
-return alert(str);
+return str;
 }
 
 
@@ -78,4 +78,4 @@ function moveComma(val, moveCommaByInput) {
     return null;
 }
 
-let JS_Try_Mode_Output = jsFunk();
+let JS_Try_Mode_Output = stringsWithTheFor();

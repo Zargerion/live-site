@@ -1,7 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from django.urls.conf import re_path
-
+from django.urls.conf import re_path, include
 
 from Main.views import *
 from Main.tries import *
@@ -16,8 +15,13 @@ urlpatterns = [
         'TitleOfTryPage': 'Try Mode Page',
         'Welcoming': 'Welcome to Try Mode Page',
         'Outputs': outputs
-    }))
+    })),
+    path('registration/', registration, name='registration'),
 ]
+
+urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls'), name='login'),
+    ]
 
 handler404 = custom_handler404
 
