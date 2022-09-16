@@ -1,0 +1,71 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Algerian', sans-serif;
+}
+
+.guard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: #6495ED;
+}
+
+
+.b{
+    display: block
+}
+.JSOutput {
+    color: #FA8072;
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+}
+
+.textS {
+    font-size: 4em;
+    color: #FFD700;
+    font-family: 'Algerian', sans-serif;
+}
+
+.PyOuts {
+    font-weight: normal;
+}
+
+.back {
+    display: table;
+    font-size: 2em;
+    color: #696969;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 59, 62, .9);
+    text-align: center;
+}
+
+/*#F8F8FF*/
+
+.textBack {
+    vertical-align: middle;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+    opacity: 0.20;
+    display: none;
+
+}
+.guard_2 {
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -100;
+}
+
+

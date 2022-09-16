@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ TitleOfTryPage }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'tryStyle.css' %}">
+    <script src="{% static 'JS/ForTries.js' %}"></script>
+</head>
+<body>
+    <!-- Я сделять! -->
+    <script>
+
+    minusOpacityByTime()
+
+    setTimeout(function(){
+	    document.getElementById('NeedToHideByJS').style.display = 'none';
+    }, 3555);
+    setTimeout(function(){
+	    document.getElementById('NeedToShowJS').style.display = 'table-cell';
+    }, 3555);
+    </script>
+    <div class="guard_2">
+        <div class="back"><h1 id="NeedToShowJS" class="textBack">Welcome to Try Mode Page</h1></div>
+    </div>
+    <div class="guard">
+        <div id="NeedToHideByJS" class="textHolderWelcome"><h1 class="textS">{{ Welcoming }}</h1></div>
+        <div class="b"><h1 class="text"></h1></div>
+        <div class="b"><h1 class="PyOuts">{{ Outputs|linebreaks }}</h1></div>
+        <div id="NeedToDoOutsOfJsHere" class="JSOutput"><script>document.write(JS_Try_Mode_Output)</script></div>
+        <div class="b"><h1 class="text"></h1></div>
+    </div>
+</body>
+</html>

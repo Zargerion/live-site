@@ -1,0 +1,1 @@
+web: gunicorn SubterSite.wsgi --log-file -

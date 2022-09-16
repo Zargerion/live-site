@@ -1,0 +1,100 @@
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+a:active {
+    text-decoration: none;
+}
+a{
+    color: rgb(255,186,0);
+}
+.sidebar-nav{
+    position: fixed;
+    height: 6vh;
+    width: 100%;
+    background: rgb(12,14,50);
+    background: linear-gradient(270deg, rgba(12,14,50,1) 0%, rgba(18,60,105,1) 49%, rgba(12,14,50,1) 100%);
+    /*background: rgb(0,4,129);
+    background: linear-gradient(0deg, rgba(0,4,129,1) 26%, rgba(0,2,71,1) 75%, rgba(0,1,18,0.8631827731092436) 98%);*/
+    margin: 0;
+    padding: 0;
+    z-index: +30;
+    margin-top: 1%;
+    box-shadow: 0 0 50px rgba(0,0,0,0.25);
+}
+
+
+.items_nav{
+    display: table-cell!important;
+    vertical-align: middle;
+    text-align: center;
+    width: 33%;
+}
+.guard0{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 10% 80% 10%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding: 7% 20% 1% 20%
+
+}
+#sidebars{
+    text-align: center;
+    width: 70px;
+    height: 500px;
+    position: fixed;
+    background-color: #FFD700;
+    box-shadow: 0 0 25px rgba(0,0,0,0.25);
+    border-radius: 15px;
+    top: 19%;
+    padding: 0.5%;
+}
+.sidebar1{
+    margin-right: -90%;
+    background: rgb(255,186,0);
+    background: linear-gradient(90deg, rgba(255,186,0,1) 0%, rgba(255,186,0,1) 35%, rgba(197,141,0,0.7315301120448179) 85%);
+}
+.sidebar2{
+    margin-left: -90%;
+    background: rgb(255,186,0);
+    background: linear-gradient(270deg, rgba(255,186,0,1) 0%, rgba(255,186,0,1) 35%, rgba(197,141,0,0.7315301120448179) 85%);
+}
+
+#lines{
+    margin-right: -90%;
+    background: rgb(255,186,0);
+    background: linear-gradient(90deg, rgba(255,186,0,1) 0%, rgba(255,186,0,1) 35%, rgba(197,141,0,0.7315301120448179) 85%);
+}
+
+.buttons{
+    display: flex;
+    height: 14.2857142857%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial Black', sans-serif;
+    text-shadow: 1px 0 1px #000,
+    0 1px 1px #000,
+    -1px 0 1px #000,
+    0 -1px 1px #000;
+}
+
+#text1{
+    transform: rotate(45deg);
+}
+
+#text2{
+    transform: rotate(315deg);
+}
+/*background: linear-gradient(0deg, rgba(10,16,255,1) 7%, rgba(0,6,223,1) 14%, rgba(0,4,129,1) 26%, rgba(0,2,71,1) 75%,
+rgba(0,1,18,0.9031827731092436) 98%);*/
