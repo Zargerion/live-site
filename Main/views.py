@@ -8,15 +8,15 @@ from django.views.generic import TemplateView
 from django.views.generic.base import RedirectView
 from django.core.handlers import exception
 
-#from .casino import call_casino
+from .casino import call_casino
 from .forms import *
 from .models import Creation
 
 favicon_view = RedirectView.as_view(url='/static/favicon.ico', permanent=True)
 
-#def casino(request):
-#    call_casino(request)
-#    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+def casino(request):
+    call_casino(request)
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 def mainview(request):
     return TemplateResponse(request, 'main.html')

@@ -27,13 +27,12 @@ SECRET_KEY = os.getenv('SECRET_KEY', '04+fren@e11csoh**1)!ffovbo3d88#uml_)+7zh3@
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-DEVELOPMENT = False
+DEVELOPMENT = True
 
 if DEVELOPMENT == True:
     ALLOWED_HOSTS = ['127.0.0.1']
 else:
     ALLOWED_HOSTS = ['subter.herokuapp.com', '*']
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -74,7 +73,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                #'Main.context_processors.score',
+                'Main.context_processors.score',
             ],
         },
     },
