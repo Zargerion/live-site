@@ -30,3 +30,8 @@ def decide_1():
 decide_1()
 
 # Так я открыл для себя много нового =(
+
+# для хероку на приложение -> more -> run console
+# python3 manage.py makemigrations
+# python3 manage.py migrate
+# python3 manage.py createsuperuser

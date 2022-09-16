@@ -33,6 +33,7 @@ if DEVELOPMENT == True:
     ALLOWED_HOSTS = ['127.0.0.1']
 else:
     ALLOWED_HOSTS = ['subter.herokuapp.com', '*']
+
 # Application definition
 
 INSTALLED_APPS = [

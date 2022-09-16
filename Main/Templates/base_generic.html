@@ -14,7 +14,7 @@ margin: 0; padding: 0; position: relative">
         <div style="display: table; height: 100%; width: 100%;">
             {% if user.is_authenticated %}
                 <li class="items_nav">Bro, {{ user.get_username }}</li>
-                <li class="items_nav">Score: {{score_out}}</li>
+                <li class="items_nav">Score: score_out</li>
                 <li class="items_nav"><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
             {% else %}
                 <li class="items_nav"><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
@@ -29,7 +29,8 @@ margin: 0; padding: 0; position: relative">
     <div class="guard0">
         <div class="sidebar1" id="sidebars">
             {% if user.is_authenticated %}
-                <div class="buttons" id="text2"><a href="{% url 'casino'%}">Casino</a></div>
+                <div class="buttons" id="text2"><a href="">Casino</a></div>
+                <!--'casino'-->
                 <div class="buttons" id="text2">Chat</div>
                 <div class="buttons" id="text2">Games</div>
                 <div class="buttons" id="text2">Books</div>
