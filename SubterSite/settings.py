@@ -25,10 +25,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.getenv('SECRET_KEY', '04+fren@e11csoh**1)!ffovbo3d88#uml_)+7zh3@flcwh6m4')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
+DEVELOPMENT = False
 
-#ALLOWED_HOSTS = ['subter.herokuapp.com', '*'] # *
-if DEBUG == True:
+if DEVELOPMENT == True:
     ALLOWED_HOSTS = ['127.0.0.1']
 else:
     ALLOWED_HOSTS = ['subter.herokuapp.com', '*']
