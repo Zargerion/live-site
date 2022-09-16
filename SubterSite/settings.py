@@ -26,7 +26,10 @@ SECRET_KEY = os.getenv('SECRET_KEY', '04+fren@e11csoh**1)!ffovbo3d88#uml_)+7zh3@
 DEBUG = False
 
 #ALLOWED_HOSTS = ['subter.herokuapp.com', '*'] # *
-ALLOWED_HOSTS = ['*'] # *
+if DEBUG == True:
+    ALLOWED_HOSTS = ['127.0.0.1']
+else:
+    ALLOWED_HOSTS = ['subter.herokuapp.com', '*']
 # Application definition
 
 INSTALLED_APPS = [
@@ -145,11 +148,15 @@ MEDIA_URL = '/media/'
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, r'Main/static')
+STATIC_ROOT = os.path.join(BASE_DIR, r'Main/staticRoot')
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, r"Main/static/Main"),
-    os.path.join(BASE_DIR, r"Main/static/Main/images")
+    os.path.join(BASE_DIR, r"Main/static/Main/images"),
+)
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
 )
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # white noise
