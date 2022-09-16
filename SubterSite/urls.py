@@ -21,7 +21,7 @@ urlpatterns = [
     }), name='secret'),
     path('accounts/registration', registration, name='registration'),
     path('hello', login_required(AfterLogin.as_view()), name='really_main_page'),
-    path('back_to_future', casino, name='casino'),
+    #path('back_to_future', casino, name='casino'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
