@@ -1,3 +1,4 @@
+import os
 
 
 def strings_with_the_for(strings=[]):
@@ -6,9 +7,15 @@ def strings_with_the_for(strings=[]):
     return " \n".join(strings)
 
 
-    
-
 try_out = "String For Python Output"
 
 outputs = strings_with_the_for()
+
+# a = False
+
+# def test():
+#  global a
+#  a = True
+#  return a
+
 

@@ -35,7 +35,11 @@
         </div>
         <div class="second">
             <div class="start_key">
+                {% if user.is_authenticated %}
+                <a href="{% url 'really_main_page' %}" class="start_key_text">Start</a>
+                {% else %}
                 <a href="{% url 'login' %}" class="start_key_text">Start</a>
+                {% endif %}
             </div>
         </div>
         <div class="third">

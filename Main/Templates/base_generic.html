@@ -1,18 +1,60 @@
 <html>
 <head>
     <title>{% block title %}{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'after_login.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'base_generic.css' %}">
 </head>
-<body>
-
+<body style="height: auto; width: 100%; color: rgb(255,186,0); text-decoration: none; background: rgb(26,26,29);
+background: linear-gradient(270deg, rgba(26,26,29,1) 0%, rgba(72,78,81,0.9472163865546218) 49%, rgba(26,26,29,1) 100%);
+margin: 0; padding: 0; position: relative">
     <ul class="sidebar-nav">
-        {% if user.is_authenticated %}
-            <li>Пользователь: {{ user.get_username }}</li>
-            <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
-        {% else %}
-            <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
-        {% endif %}
+        <div id="lines" style="height: 1px; width: 100%"></div>
+        <div style="display: table; height: 100%; width: 100%;">
+            {% if user.is_authenticated %}
+                <li class="items_nav">Bro, {{ user.get_username }}</li>
+                <li class="items_nav">Score: {{score_out}}</li>
+                <li class="items_nav"><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+            {% else %}
+                <li class="items_nav"><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+            {% endif %}
+        </div>
+        <div id="lines" style="height: 1px; width: 100%"></div>
     </ul>
+    <div class="container" style="padding-top: 23vh">
+        {% block content %}{% endblock content %}
+    </div>
+    <ul class="" style="text-align: center; margin-bottom: 3%; padding-inline-start: 0;">© 2009-2022 Subter Inc.</ul>
+    <div class="guard0">
+        <div class="sidebar1" id="sidebars">
+            {% if user.is_authenticated %}
+                <div class="buttons" id="text2"><a href="{% url 'casino'%}">Casino</a></div>
+                <div class="buttons" id="text2">Chat</div>
+                <div class="buttons" id="text2">Games</div>
+                <div class="buttons" id="text2">Books</div>
+                <div class="buttons" id="text2">Links</div>
+                <div class="buttons" id="text2"><a href="{% url 'secret'%}">Secret</a></div>
+                <div class="buttons" id="text2">Random</div>
+            {% else %}
+                <div></div>
+            {% endif %}
+        </div>
+        <div class="sidebar2" id="sidebars">
+            {% if user.is_authenticated %}
+                <div class="buttons" id="text1">Love</div>
+                <div class="buttons" id="text1">Info</div>
+                <div class="buttons" id="text1">Music</div>
+                <div class="buttons" id="text1">Discord</div>
+                <div class="buttons" id="text1">Best</div>
+                <div class="buttons" id="text1">Friends</div>
+                <div class="buttons" id="text1"><a href="{% url 'rina'%}">WTF</a></div>
+            {% else %}
+                <div></div>
+            {% endif %}
+        </div>
+    </div>
 
-    {% block content %}{% endblock content %}
+
 </body>
 </html>

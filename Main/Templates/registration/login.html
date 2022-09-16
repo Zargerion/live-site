@@ -1,6 +1,6 @@
 {% extends "base_generic.html" %}
 
-{% block title %} Authentication {% endblock title %}
+{% block title %} Come, my friend! {% endblock title %}
 
 {% block content %}
 
@@ -37,8 +37,8 @@
             </tr>
         </table>
 
-        <input type="submit" value="Bxoд" />
-        <input type="hidden" name="next" value="{{ next }}" />
+        <input style="margin-top: 1rem" type="submit" value="Get in" />
+
     </form>
 
     <p><a href="{% url 'password_reset' %}"> Can't remember a password?</a></p>

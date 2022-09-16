@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from Main.models import Creation
+
+admin.site.register(Creation)
+# it registers model in admin panel

@@ -20,10 +20,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '04+fren@e11csoh**1)!ffovbo3d88#uml_)+7zh3@flcwh6m4'
+SECRET_KEY = os.getenv('SECRET_KEY', '04+fren@e11csoh**1)!ffovbo3d88#uml_)+7zh3@flcwh6m4')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 #ALLOWED_HOSTS = ['subter.herokuapp.com', '*'] # *
 ALLOWED_HOSTS = ['127.0.0.1'] # *
@@ -41,18 +41,20 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware', # white noise
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # white noise
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',  # by the idea it kills bag with browser cache
 ]
 
 ROOT_URLCONF = 'SubterSite.urls'
 
-TEMPLATE_DIR = os.path.join(BASE_DIR, 'Main/Templates')
+TEMPLATE_DIR = os.path.join(BASE_DIR, r'Main\Templates')
+
 
 TEMPLATES = [
     {
@@ -65,6 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'Main.context_processors.score',
             ],
         },
     },
@@ -83,10 +86,10 @@ DATABASES = {
     }
 }
 
-SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies' # means contain sessions info only in cookie
-SESSION_EXPIRE_AT_BROWSER_CLOSE = False # doesn't delete session info after browser closing
-SESSION_COOKIE_AGE = 756864000 # 24 years in seconds
-SESSION_COOKIE_SECURE = True # means only https sent to your browser
+SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'  # means contain sessions info only in cookie
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # doesn't delete session info after browser closing
+SESSION_COOKIE_AGE = 756864000  # 24 years in seconds
+SESSION_COOKIE_SECURE = True  # means only https sent to your browser
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -106,7 +109,17 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'really_main_page'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+#EMAIL_HOST_USER = 'iolegx7@gmail.com'
+#EMAIL_HOST_PASSWORD = 'UxrFDyVU3Z'
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = 587
+
 
 
 # Internationalization
@@ -126,14 +139,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 # idk idk1234
 
+MEDIA_ROOT = os.path.join(BASE_DIR, r'Main\media')
+
+MEDIA_URL = '/media/'
+
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'Main/static')
+STATIC_ROOT = os.path.join(BASE_DIR, r'Main\static')
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "Main/static/Main"),
-    os.path.join(BASE_DIR, "Main/static/Main/images")
-
+    os.path.join(BASE_DIR, r"Main\static\Main"),
+    os.path.join(BASE_DIR, r"Main\static\Main\images")
 )
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' # white noise
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # white noise
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'  # to models auto-field for id column in bd
