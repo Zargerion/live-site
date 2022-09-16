@@ -26,7 +26,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', '04+fren@e11csoh**1)!ffovbo3d88#uml_)+7zh3@
 DEBUG = False
 
 #ALLOWED_HOSTS = ['subter.herokuapp.com', '*'] # *
-ALLOWED_HOSTS = ['127.0.0.1'] # *
+ALLOWED_HOSTS = ['*'] # *
 # Application definition
 
 INSTALLED_APPS = [
@@ -53,7 +53,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'SubterSite.urls'
 
-TEMPLATE_DIR = os.path.join(BASE_DIR, r'Main\Templates')
+TEMPLATE_DIR = os.path.join(BASE_DIR, r'Main/Templates')
 
 
 TEMPLATES = [
@@ -139,17 +139,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 # idk idk1234
 
-MEDIA_ROOT = os.path.join(BASE_DIR, r'Main\media')
+MEDIA_ROOT = os.path.join(BASE_DIR, r'Main/media')
 
 MEDIA_URL = '/media/'
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, r'Main\static')
+STATIC_ROOT = os.path.join(BASE_DIR, r'Main/static')
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, r"Main\static\Main"),
-    os.path.join(BASE_DIR, r"Main\static\Main\images")
+    os.path.join(BASE_DIR, r"Main/static/Main"),
+    os.path.join(BASE_DIR, r"Main/static/Main/images")
 )
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # white noise
