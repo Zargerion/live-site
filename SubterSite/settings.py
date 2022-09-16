@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 import os
 
+import django_heroku
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -149,6 +151,7 @@ MEDIA_URL = '/media/'
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, r'Main/staticRoot')
+django_heroku.settings(locals())
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, r"Main/static/Main"),
